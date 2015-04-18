@@ -1,11 +1,12 @@
 import pickle
+valid = False
+
 users_file = open('users.dat', 'rb')
 users = pickle.load(users_file)
 users_file.close()
 
-
-def make_acc():
-    valid = False
+response = input("have you got an account (yes/no)")
+if response == "no":
     while valid is False:
         print("make an account")
         username = input ("chose your username DO NOT use your real name!!!!")
@@ -21,13 +22,12 @@ def make_acc():
                 user_file = open ('users.dat', 'wb')
                 pickle.dump(users, user_file)
                 user_file.close()
-
-response = input("have you got an account (yes/no)")
-if response == "no":
-   make_acc()
 if response == "yes":
    import pickle
 
+users_file = open('users.dat', 'rb')
+users = pickle.load(users_file)
+users_file.close()
 
 #print (users['ik']
 
