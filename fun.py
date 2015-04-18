@@ -5,8 +5,7 @@ users_file.close()
 
 
 def make_acc():
-    valid = False
-    while valid is False:
+   while valid is False:
         print("make an account")
         username = input ("chose your username DO NOT use your real name!!!!")
         password = input ("chose your password and don't tell anyone.")
